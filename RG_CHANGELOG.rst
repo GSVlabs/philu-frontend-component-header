@@ -4,10 +4,14 @@ RG Changelog
 All notable changes to this project will be documented in this file.
 
 The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`_,
-and this project adheres to customized Semantic Versioning e.g.: `palm-rg.1`
+and this project adheres to customized Semantic Versioning e.g.: `quince-rg.1`
 
 [Unreleased]
 ************
+
+Fix:
+====
+* Removed not correct hover color on the Back to Instructor Dashboard button (RGOeX-26235)
 
 [palm-rg.2] release 2023-12-01
 ******************************
