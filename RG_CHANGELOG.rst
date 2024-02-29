@@ -15,6 +15,8 @@ Added:
 
 Fix:
 ====
+* Fixed Studio Header in cases when course title is too long (RGOeX-26425)
+    * We don't need to remove these fixes in the future, because all these modifications will be added when we reach header version 4.10.1 or higher. Let's delete this row after header version 4.10.1
 * Removed not correct hover color on the Back to Instructor Dashboard button (RGOeX-26235)
 
 [palm-rg.2] release 2023-12-01

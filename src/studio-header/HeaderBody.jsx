@@ -64,17 +64,19 @@ const HeaderBody = ({
                 Menu
               </Button>
             ) : (
-              <Row className="flex-nowrap m-0">
-                {renderBrandNav}
-                <CourseLockUp
-                  {...{
-                    outlineLink,
-                    number,
-                    org,
-                    title,
-                  }}
-                />
-              </Row>
+              <div className="w-25">
+                <Row className="flex-nowrap m-0">
+                  {renderBrandNav}
+                  <CourseLockUp
+                    {...{
+                      outlineLink,
+                      number,
+                      org,
+                      title,
+                    }}
+                  />
+                </Row>
+              </div>
             )}
             {isMobile ? (
               <>
