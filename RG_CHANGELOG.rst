@@ -9,6 +9,10 @@ and this project adheres to customized Semantic Versioning e.g.: `quince-rg.1`
 [Unreleased]
 ************
 
+Added:
+=====
+* Added inclusion for cookie banner styles (RGOeX-26418)
+
 Fix:
 ====
 * Removed not correct hover color on the Back to Instructor Dashboard button (RGOeX-26235)

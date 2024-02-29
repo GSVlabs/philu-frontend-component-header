@@ -2,6 +2,7 @@ $spacer: 1rem;
 $blue: #007db8;
 $white: #fff;
 
+@import "~@edx/frontend-component-cookie-policy-banner/src/CookiePolicyBanner/cookie-policy-banner";
 @import "./Menu/menu";
 @import "./studio-header/header";
 
