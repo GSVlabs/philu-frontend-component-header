@@ -43,14 +43,16 @@ var HeaderBody = function HeaderBody(_ref) {
     onClick: toggleModalPopup,
     iconBefore: isModalPopupOpen ? Close : MenuIcon,
     "data-testid": "mobile-menu-button"
-  }, "Menu") : /*#__PURE__*/React.createElement(Row, {
+  }, "Menu") : /*#__PURE__*/React.createElement("div", {
+    className: "w-25"
+  }, /*#__PURE__*/React.createElement(Row, {
     className: "flex-nowrap m-0"
   }, renderBrandNav, /*#__PURE__*/React.createElement(CourseLockUp, {
     outlineLink: outlineLink,
     number: number,
     org: org,
     title: title
-  })), isMobile ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ActionRow.Spacer, null), renderBrandNav) : /*#__PURE__*/React.createElement(Nav, {
+  }))), isMobile ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ActionRow.Spacer, null), renderBrandNav) : /*#__PURE__*/React.createElement(Nav, {
     "data-testid": "desktop-menu",
     className: "ml-4"
   }, mainMenuDropdowns.map(function (dropdown) {
