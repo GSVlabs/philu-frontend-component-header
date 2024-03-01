@@ -5,7 +5,7 @@ var getUserMenuItems = function getUserMenuItems(_ref) {
     intl = _ref.intl,
     isAdmin = _ref.isAdmin;
   var items = [{
-    href: "".concat(studioBaseUrl, "}"),
+    href: "".concat(studioBaseUrl),
     title: intl.formatMessage(messages['header.user.menu.studio'])
   }, {
     href: "".concat(logoutUrl),
@@ -13,7 +13,7 @@ var getUserMenuItems = function getUserMenuItems(_ref) {
   }];
   if (isAdmin) {
     items = [{
-      href: "".concat(studioBaseUrl, "}"),
+      href: "".concat(studioBaseUrl),
       title: intl.formatMessage(messages['header.user.menu.studio'])
     }, {
       href: "".concat(studioBaseUrl, "/maintenance"),
