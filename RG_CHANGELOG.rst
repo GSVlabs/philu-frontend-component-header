@@ -15,6 +15,7 @@ Added:
 
 Fix:
 ====
+* Changed cookie banner version in package-lock.json (RGOeX-26418)
 * Changed cookie banner version in package.json (RGOeX-26418)
 * Changed import path to cookie banner styles (RGOeX-26418)
 * Fix a typo for the Studio URL in the studio header dropdown (RGOeX-26419). This commit should be dropped when rebasing on upstream version 4.9.3+
