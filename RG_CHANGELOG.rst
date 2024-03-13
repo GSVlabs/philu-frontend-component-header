@@ -9,6 +9,9 @@ and this project adheres to customized Semantic Versioning e.g.: `quince-rg.1`
 [Unreleased]
 ************
 
+[quince-rg.1] - 2024-03-13
+**************************
+
 Added:
 =====
 * Added inclusion for cookie banner styles (RGOeX-26418)
