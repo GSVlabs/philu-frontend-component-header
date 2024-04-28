@@ -9,6 +9,10 @@ and this project adheres to customized Semantic Versioning e.g.: `quince-rg.1`
 [Unreleased]
 ************
 
+Changed:
+========
+* When clicking on the PhilU logo in the header, the redirect redirects the user to the external home page (PhU-100)
+
 [quince-rg.1] - 2024-03-13
 **************************
 
