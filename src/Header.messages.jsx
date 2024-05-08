@@ -121,6 +121,41 @@ const messages = defineMessages({
     defaultMessage: 'Leaderboard',
     description: 'The label for the user menu Gamma leaderboard action.',
   },
+  'header.menu.manage.information.label': {
+    id: 'header.menu.manage.information.label',
+    defaultMessage: 'Manage information',
+    description: 'The label for the user menu manage information action.',
+  },
+  'header.menu.my.courses': {
+    id: 'header.menu.my.courses',
+    defaultMessage: 'My courses',
+    description: 'Link to the learner dashboard',
+  },
+  'header.menu.my.programs': {
+    id: 'header.menu.my.programs',
+    defaultMessage: 'My programs',
+    description: 'Link to the learner programs',
+  },
+  'header.user.menu.my.account.settings': {
+    id: 'header.user.menu.my.account.settings',
+    defaultMessage: 'My account',
+    description: 'Link to account settings',
+  },
+  'header.user.menu.my.profile': {
+    id: 'header.user.menu.my.profile',
+    defaultMessage: 'My profile',
+    description: 'Link to profile',
+  },
+  'header.menu.help.center': {
+    id: 'header.menu.help.center',
+    defaultMessage: 'Help center',
+    description: 'Link to the help center',
+  },
+  'header.user.menu.signout': {
+    id: 'header.user.menu.signout',
+    defaultMessage: 'Sign Out',
+    description: 'Sign Out link',
+  },
 });
 
 export default messages;

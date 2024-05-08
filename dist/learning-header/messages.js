@@ -44,6 +44,41 @@ var messages = defineMessages({
     id: 'header.menu.leaderboard.label',
     defaultMessage: 'Leaderboard',
     description: 'The label for the user menu Gamma leaderboard action.'
+  },
+  courses: {
+    id: 'header.navigation.courses.label',
+    defaultMessage: 'Courses',
+    description: 'The label for the user navigation Courses action.'
+  },
+  myCourses: {
+    id: 'header.menu.myCourses.label',
+    defaultMessage: 'My courses',
+    description: 'The label for the user menu My courses action.'
+  },
+  myPrograms: {
+    id: 'header.menu.programs.label',
+    defaultMessage: 'My programs',
+    description: 'The label for the user menu programs action.'
+  },
+  myAccount: {
+    id: 'header.menu.my.account.label',
+    defaultMessage: 'My account',
+    description: 'The label for the user menu my account action.'
+  },
+  myProfile: {
+    id: 'header.menu.my.profile.label',
+    defaultMessage: 'My profile',
+    description: 'The label for the user menu my profile action.'
+  },
+  manageInformation: {
+    id: 'header.menu.manage.information.label',
+    defaultMessage: 'Manage information',
+    description: 'The label for the user menu manage information action.'
+  },
+  helpCenter: {
+    id: 'header.menu.help.center.label',
+    defaultMessage: 'Help center',
+    description: 'The label for the user menu help center.'
   }
 });
 export default messages;

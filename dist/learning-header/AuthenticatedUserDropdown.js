@@ -12,11 +12,14 @@ var AuthenticatedUserDropdown = function AuthenticatedUserDropdown(_ref) {
     username = _ref.username;
   var dashboardMenuItem = /*#__PURE__*/React.createElement(Dropdown.Item, {
     href: "".concat(getConfig().LMS_BASE_URL, "/dashboard")
-  }, intl.formatMessage(messages.dashboard));
+  }, intl.formatMessage(messages.myCourses));
+  var programsMenuItem = /*#__PURE__*/React.createElement(Dropdown.Item, {
+    href: "".concat(getConfig().LMS_BASE_URL, "/programs")
+  }, intl.formatMessage(messages.myPrograms));
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("a", {
     className: "text-gray-700",
-    href: "".concat(getConfig().SUPPORT_URL)
-  }, intl.formatMessage(messages.help)), /*#__PURE__*/React.createElement(Dropdown, {
+    href: "".concat(getConfig().LMS_BASE_URL, "/courses")
+  }, intl.formatMessage(messages.courses)), /*#__PURE__*/React.createElement(Dropdown, {
     className: "user-dropdown ml-3"
   }, /*#__PURE__*/React.createElement(Dropdown.Toggle, {
     variant: "outline-primary"
@@ -29,18 +32,25 @@ var AuthenticatedUserDropdown = function AuthenticatedUserDropdown(_ref) {
     className: "d-none d-md-inline"
   }, username)), /*#__PURE__*/React.createElement(Dropdown.Menu, {
     className: "dropdown-menu-right"
-  }, dashboardMenuItem, showGamification && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Dropdown.Item, {
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "dropdown-section-name"
+  }, intl.formatMessage(messages.dashboard)), dashboardMenuItem, programsMenuItem, showGamification && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Dropdown.Item, {
     href: "".concat(getConfig().LMS_BASE_URL, "/gamma_dashboard/dashboard")
   }, intl.formatMessage(messages.performance)), /*#__PURE__*/React.createElement(Dropdown.Item, {
     href: "".concat(getConfig().LMS_BASE_URL, "/gamma_dashboard/leaderboard")
-  }, intl.formatMessage(messages.leaderboard))), /*#__PURE__*/React.createElement(Dropdown.Item, {
-    href: "".concat(getConfig().ACCOUNT_PROFILE_URL, "/u/").concat(username)
-  }, intl.formatMessage(messages.profile)), /*#__PURE__*/React.createElement(Dropdown.Item, {
+  }, intl.formatMessage(messages.leaderboard))), /*#__PURE__*/React.createElement("span", {
+    className: "dropdown-section-name with-border"
+  }, intl.formatMessage(messages.manageInformation)), /*#__PURE__*/React.createElement(Dropdown.Item, {
     href: getConfig().ACCOUNT_SETTINGS_URL
-  }, intl.formatMessage(messages.account)), getConfig().ORDER_HISTORY_URL && /*#__PURE__*/React.createElement(Dropdown.Item, {
+  }, intl.formatMessage(messages.myAccount)), /*#__PURE__*/React.createElement(Dropdown.Item, {
+    href: "".concat(getConfig().ACCOUNT_PROFILE_URL, "/u/").concat(username)
+  }, intl.formatMessage(messages.myProfile)), /*#__PURE__*/React.createElement(Dropdown.Item, {
+    href: "https://edx.readthedocs.io/projects/open-edx-learner-guide/en/open-release-quince.master/SFD_dashboard_profile_SectionHead.html"
+  }, intl.formatMessage(messages.helpCenter)), getConfig().ORDER_HISTORY_URL && /*#__PURE__*/React.createElement(Dropdown.Item, {
     href: getConfig().ORDER_HISTORY_URL
   }, intl.formatMessage(messages.orderHistory)), /*#__PURE__*/React.createElement(Dropdown.Item, {
-    href: getConfig().LOGOUT_URL
+    href: getConfig().LOGOUT_URL,
+    className: "with-border"
   }, intl.formatMessage(messages.signOut)))));
 };
 AuthenticatedUserDropdown.propTypes = {
