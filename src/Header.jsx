@@ -98,7 +98,7 @@ const Header = ({ intl }) => {
     {
       type: 'item',
       target: '_blank',
-      href: 'https://edx.readthedocs.io/projects/open-edx-learner-guide/en/open-release-quince.master/SFD_dashboard_profile_SectionHead.html',
+      href: config.SUPPORT_URL_DROPDOWN,
       content: intl.formatMessage(messages['header.menu.help.center']),
     },
     {

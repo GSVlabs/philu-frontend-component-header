@@ -45,7 +45,7 @@ var AuthenticatedUserDropdown = function AuthenticatedUserDropdown(_ref) {
   }, intl.formatMessage(messages.myAccount)), /*#__PURE__*/React.createElement(Dropdown.Item, {
     href: "".concat(getConfig().ACCOUNT_PROFILE_URL, "/u/").concat(username)
   }, intl.formatMessage(messages.myProfile)), /*#__PURE__*/React.createElement(Dropdown.Item, {
-    href: "https://edx.readthedocs.io/projects/open-edx-learner-guide/en/open-release-quince.master/SFD_dashboard_profile_SectionHead.html"
+    href: getConfig().SUPPORT_URL_DROPDOWN
   }, intl.formatMessage(messages.helpCenter)), getConfig().ORDER_HISTORY_URL && /*#__PURE__*/React.createElement(Dropdown.Item, {
     href: getConfig().ORDER_HISTORY_URL
   }, intl.formatMessage(messages.orderHistory)), /*#__PURE__*/React.createElement(Dropdown.Item, {

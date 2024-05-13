@@ -55,7 +55,7 @@ const AuthenticatedUserDropdown = ({ intl, username }) => {
           <Dropdown.Item href={`${getConfig().ACCOUNT_PROFILE_URL}/u/${username}`}>
             {intl.formatMessage(messages.myProfile)}
           </Dropdown.Item>
-          <Dropdown.Item href="https://edx.readthedocs.io/projects/open-edx-learner-guide/en/open-release-quince.master/SFD_dashboard_profile_SectionHead.html">
+          <Dropdown.Item href={getConfig().SUPPORT_URL_DROPDOWN}>
             {intl.formatMessage(messages.helpCenter)}
           </Dropdown.Item>
           { getConfig().ORDER_HISTORY_URL && (
