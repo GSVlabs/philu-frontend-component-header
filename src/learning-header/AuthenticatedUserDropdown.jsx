@@ -14,13 +14,19 @@ const showGamification = process.env.ENABLE_RG_GAMIFICATION ? process.env.ENABLE
 const AuthenticatedUserDropdown = ({ intl, username }) => {
   const dashboardMenuItem = (
     <Dropdown.Item href={`${getConfig().LMS_BASE_URL}/dashboard`}>
-      {intl.formatMessage(messages.dashboard)}
+      {intl.formatMessage(messages.myCourses)}
+    </Dropdown.Item>
+  );
+
+  const programsMenuItem = (
+    <Dropdown.Item href={`${getConfig().LMS_BASE_URL}/programs`}>
+      {intl.formatMessage(messages.myPrograms)}
     </Dropdown.Item>
   );
 
   return (
     <>
-      <a className="text-gray-700" href={`${getConfig().SUPPORT_URL}`}>{intl.formatMessage(messages.help)}</a>
+      <a className="text-gray-700" href={`${getConfig().LMS_BASE_URL}/courses`}>{intl.formatMessage(messages.courses)}</a>
       <Dropdown className="user-dropdown ml-3">
         <Dropdown.Toggle variant="outline-primary">
           <FontAwesomeIcon icon={faUserCircle} className="d-md-none" size="lg" />
@@ -29,7 +35,9 @@ const AuthenticatedUserDropdown = ({ intl, username }) => {
           </span>
         </Dropdown.Toggle>
         <Dropdown.Menu className="dropdown-menu-right">
+          <span className="dropdown-section-name">{intl.formatMessage(messages.dashboard)}</span>
           {dashboardMenuItem}
+          {programsMenuItem}
           {showGamification && (
             <>
               <Dropdown.Item href={`${getConfig().LMS_BASE_URL}/gamma_dashboard/dashboard`}>
@@ -40,18 +48,22 @@ const AuthenticatedUserDropdown = ({ intl, username }) => {
               </Dropdown.Item>
             </>
           )}
-          <Dropdown.Item href={`${getConfig().ACCOUNT_PROFILE_URL}/u/${username}`}>
-            {intl.formatMessage(messages.profile)}
-          </Dropdown.Item>
+          <span className="dropdown-section-name with-border">{intl.formatMessage(messages.manageInformation)}</span>
           <Dropdown.Item href={getConfig().ACCOUNT_SETTINGS_URL}>
-            {intl.formatMessage(messages.account)}
+            {intl.formatMessage(messages.myAccount)}
+          </Dropdown.Item>
+          <Dropdown.Item href={`${getConfig().ACCOUNT_PROFILE_URL}/u/${username}`}>
+            {intl.formatMessage(messages.myProfile)}
+          </Dropdown.Item>
+          <Dropdown.Item href={getConfig().SUPPORT_URL_DROPDOWN}>
+            {intl.formatMessage(messages.helpCenter)}
           </Dropdown.Item>
           { getConfig().ORDER_HISTORY_URL && (
             <Dropdown.Item href={getConfig().ORDER_HISTORY_URL}>
               {intl.formatMessage(messages.orderHistory)}
             </Dropdown.Item>
           )}
-          <Dropdown.Item href={getConfig().LOGOUT_URL}>
+          <Dropdown.Item href={getConfig().LOGOUT_URL} className="with-border">
             {intl.formatMessage(messages.signOut)}
           </Dropdown.Item>
         </Dropdown.Menu>

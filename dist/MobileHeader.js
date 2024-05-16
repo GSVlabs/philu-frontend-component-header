@@ -73,19 +73,31 @@ var MobileHeader = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "renderUserMenuItems",
     value: function renderUserMenuItems() {
-      var userMenu = this.props.userMenu;
-      return userMenu.map(function (_ref) {
+      var _this$props = this.props,
+        userMenu = _this$props.userMenu,
+        intl = _this$props.intl;
+      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("li", {
+        className: "nav-item"
+      }, /*#__PURE__*/React.createElement("a", {
+        className: "nav-link",
+        href: "".concat(getConfig().LMS_BASE_URL, "/courses")
+      }, intl.formatMessage(messages['header.links.courses']))), userMenu.map(function (_ref) {
         var type = _ref.type,
           href = _ref.href,
-          content = _ref.content;
+          content = _ref.content,
+          additionalClass = _ref.additionalClass,
+          target = _ref.target;
         return /*#__PURE__*/React.createElement("li", {
           className: "nav-item",
           key: "".concat(type, "-").concat(content)
-        }, /*#__PURE__*/React.createElement("a", {
-          className: "nav-link",
+        }, type === 'title' ? /*#__PURE__*/React.createElement("span", {
+          className: "dropdown-section-name ".concat(additionalClass)
+        }, content) : /*#__PURE__*/React.createElement("a", {
+          className: "nav-link ".concat(additionalClass),
+          target: target,
           href: href
         }, content));
-      });
+      }));
     }
   }, {
     key: "renderLoggedOutItems",
@@ -107,18 +119,18 @@ var MobileHeader = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this$props = this.props,
-        logo = _this$props.logo,
-        logoAltText = _this$props.logoAltText,
-        logoDestination = _this$props.logoDestination,
-        loggedIn = _this$props.loggedIn,
-        avatar = _this$props.avatar,
-        username = _this$props.username,
-        stickyOnMobile = _this$props.stickyOnMobile,
-        intl = _this$props.intl,
-        mainMenu = _this$props.mainMenu,
-        userMenu = _this$props.userMenu,
-        loggedOutItems = _this$props.loggedOutItems;
+      var _this$props2 = this.props,
+        logo = _this$props2.logo,
+        logoAltText = _this$props2.logoAltText,
+        logoDestination = _this$props2.logoDestination,
+        loggedIn = _this$props2.loggedIn,
+        avatar = _this$props2.avatar,
+        username = _this$props2.username,
+        stickyOnMobile = _this$props2.stickyOnMobile,
+        intl = _this$props2.intl,
+        mainMenu = _this$props2.mainMenu,
+        userMenu = _this$props2.userMenu,
+        loggedOutItems = _this$props2.loggedOutItems;
       var logoProps = {
         src: logo,
         alt: logoAltText,

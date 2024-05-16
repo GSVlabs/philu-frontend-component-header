@@ -57,13 +57,26 @@ class MobileHeader extends React.Component {
   }
 
   renderUserMenuItems() {
-    const { userMenu } = this.props;
+    const { userMenu, intl } = this.props;
 
-    return userMenu.map(({ type, href, content }) => (
-      <li className="nav-item" key={`${type}-${content}`}>
-        <a className="nav-link" href={href}>{content}</a>
-      </li>
-    ));
+    return (
+      <>
+        <li className="nav-item">
+          <a className="nav-link" href={`${getConfig().LMS_BASE_URL}/courses`}>{intl.formatMessage(messages['header.links.courses'])}</a>
+        </li>
+        {userMenu.map(({
+          type, href, content, additionalClass, target,
+        }) => (
+          <li className="nav-item" key={`${type}-${content}`}>
+            {type === 'title' ? (
+              <span className={`dropdown-section-name ${additionalClass}`}>{content}</span>
+            ) : (
+              <a className={`nav-link ${additionalClass}`} target={target} href={href}>{content}</a>
+            )}
+          </li>
+        ))}
+      </>
+    );
   }
 
   renderLoggedOutItems() {

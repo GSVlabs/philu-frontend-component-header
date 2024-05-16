@@ -66,24 +66,46 @@ const Header = ({ intl }) => {
 
   const userMenu = authenticatedUser === null ? [] : [
     {
-      type: 'item',
-      href: `${config.LMS_BASE_URL}/dashboard`,
+      type: 'title',
+      additionalClass: 'with-border',
       content: intl.formatMessage(messages['header.user.menu.dashboard']),
     },
     {
       type: 'item',
-      href: `${config.ACCOUNT_PROFILE_URL}/u/${authenticatedUser.username}`,
-      content: intl.formatMessage(messages['header.user.menu.profile']),
+      href: `${config.LMS_BASE_URL}/dashboard`,
+      content: intl.formatMessage(messages['header.menu.my.courses']),
+    },
+    {
+      type: 'item',
+      href: `${config.LMS_BASE_URL}/programs`,
+      content: intl.formatMessage(messages['header.menu.my.programs']),
+    },
+    {
+      type: 'title',
+      additionalClass: 'with-border',
+      content: intl.formatMessage(messages['header.menu.manage.information.label']),
     },
     {
       type: 'item',
       href: config.ACCOUNT_SETTINGS_URL,
-      content: intl.formatMessage(messages['header.user.menu.account.settings']),
+      content: intl.formatMessage(messages['header.user.menu.my.account.settings']),
+    },
+    {
+      type: 'item',
+      href: `${config.ACCOUNT_PROFILE_URL}/u/${authenticatedUser.username}`,
+      content: intl.formatMessage(messages['header.user.menu.my.profile']),
+    },
+    {
+      type: 'item',
+      target: '_blank',
+      href: config.SUPPORT_URL_DROPDOWN,
+      content: intl.formatMessage(messages['header.menu.help.center']),
     },
     {
       type: 'item',
       href: config.LOGOUT_URL,
-      content: intl.formatMessage(messages['header.user.menu.logout']),
+      additionalClass: 'with-border',
+      content: intl.formatMessage(messages['header.user.menu.signout']),
     },
   ];
 

@@ -136,9 +136,15 @@ var DesktopHeader = /*#__PURE__*/function (_React$Component) {
       }, userMenu.map(function (_ref2) {
         var type = _ref2.type,
           href = _ref2.href,
-          content = _ref2.content;
-        return /*#__PURE__*/React.createElement("a", {
-          className: "dropdown-".concat(type),
+          content = _ref2.content,
+          additionalClass = _ref2.additionalClass,
+          target = _ref2.target;
+        return type === 'title' ? /*#__PURE__*/React.createElement("span", {
+          className: "dropdown-section-name ".concat(additionalClass),
+          key: "".concat(type, "-").concat(content)
+        }, content) : /*#__PURE__*/React.createElement("a", {
+          className: "dropdown-".concat(type, " ").concat(additionalClass),
+          target: target,
           key: "".concat(type, "-").concat(content),
           href: href
         }, content);
