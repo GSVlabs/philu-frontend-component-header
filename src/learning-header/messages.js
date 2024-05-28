@@ -53,32 +53,32 @@ const messages = defineMessages({
   },
   myCourses: {
     id: 'header.menu.myCourses.label',
-    defaultMessage: 'My courses',
+    defaultMessage: 'My Courses',
     description: 'The label for the user menu My courses action.',
   },
   myPrograms: {
     id: 'header.menu.programs.label',
-    defaultMessage: 'My programs',
+    defaultMessage: 'My Programs',
     description: 'The label for the user menu programs action.',
   },
   myAccount: {
     id: 'header.menu.my.account.label',
-    defaultMessage: 'My account',
+    defaultMessage: 'My Account',
     description: 'The label for the user menu my account action.',
   },
   myProfile: {
     id: 'header.menu.my.profile.label',
-    defaultMessage: 'My profile',
+    defaultMessage: 'My Profile',
     description: 'The label for the user menu my profile action.',
   },
   manageInformation: {
     id: 'header.menu.manage.information.label',
-    defaultMessage: 'Manage information',
+    defaultMessage: 'Manage Information',
     description: 'The label for the user menu manage information action.',
   },
   helpCenter: {
     id: 'header.menu.help.center.label',
-    defaultMessage: 'Help center',
+    defaultMessage: 'Help Center',
     description: 'The label for the user menu help center.',
   },
 });

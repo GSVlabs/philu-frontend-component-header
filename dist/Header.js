@@ -21,7 +21,7 @@ var Header = function Header(_ref) {
     config = _useContext.config;
   var mainMenu = [{
     type: 'item',
-    href: "".concat(config.LMS_BASE_URL, "/dashboard"),
+    href: "".concat(config.LMS_BASE_URL, "/courses"),
     content: intl.formatMessage(messages['header.links.courses'])
   }];
   var gamificationItems = [{
@@ -48,7 +48,7 @@ var Header = function Header(_ref) {
     content: intl.formatMessage(messages['header.menu.my.courses'])
   }, {
     type: 'item',
-    href: "".concat(config.LMS_BASE_URL, "/programs"),
+    href: "".concat(config.LMS_BASE_URL, "/dashboard/programs"),
     content: intl.formatMessage(messages['header.menu.my.programs'])
   }, {
     type: 'title',

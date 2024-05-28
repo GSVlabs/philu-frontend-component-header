@@ -19,7 +19,7 @@ const AuthenticatedUserDropdown = ({ intl, username }) => {
   );
 
   const programsMenuItem = (
-    <Dropdown.Item href={`${getConfig().LMS_BASE_URL}/programs`}>
+    <Dropdown.Item href={`${getConfig().LMS_BASE_URL}/dashboard/programs`}>
       {intl.formatMessage(messages.myPrograms)}
     </Dropdown.Item>
   );
@@ -55,7 +55,7 @@ const AuthenticatedUserDropdown = ({ intl, username }) => {
           <Dropdown.Item href={`${getConfig().ACCOUNT_PROFILE_URL}/u/${username}`}>
             {intl.formatMessage(messages.myProfile)}
           </Dropdown.Item>
-          <Dropdown.Item href={getConfig().SUPPORT_URL_DROPDOWN}>
+          <Dropdown.Item href={getConfig().SUPPORT_URL_DROPDOWN} target="_blank">
             {intl.formatMessage(messages.helpCenter)}
           </Dropdown.Item>
           { getConfig().ORDER_HISTORY_URL && (

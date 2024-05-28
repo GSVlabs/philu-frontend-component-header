@@ -122,32 +122,32 @@ var messages = defineMessages({
   },
   'header.menu.manage.information.label': {
     id: 'header.menu.manage.information.label',
-    defaultMessage: 'Manage information',
+    defaultMessage: 'Manage Information',
     description: 'The label for the user menu manage information action.'
   },
   'header.menu.my.courses': {
     id: 'header.menu.my.courses',
-    defaultMessage: 'My courses',
+    defaultMessage: 'My Courses',
     description: 'Link to the learner dashboard'
   },
   'header.menu.my.programs': {
     id: 'header.menu.my.programs',
-    defaultMessage: 'My programs',
+    defaultMessage: 'My Programs',
     description: 'Link to the learner programs'
   },
   'header.user.menu.my.account.settings': {
     id: 'header.user.menu.my.account.settings',
-    defaultMessage: 'My account',
+    defaultMessage: 'My Account',
     description: 'Link to account settings'
   },
   'header.user.menu.my.profile': {
     id: 'header.user.menu.my.profile',
-    defaultMessage: 'My profile',
+    defaultMessage: 'My Profile',
     description: 'Link to profile'
   },
   'header.menu.help.center': {
     id: 'header.menu.help.center',
-    defaultMessage: 'Help center',
+    defaultMessage: 'Help Center',
     description: 'Link to the help center'
   },
   'header.user.menu.signout': {

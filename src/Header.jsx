@@ -40,7 +40,7 @@ const Header = ({ intl }) => {
   const mainMenu = [
     {
       type: 'item',
-      href: `${config.LMS_BASE_URL}/dashboard`,
+      href: `${config.LMS_BASE_URL}/courses`,
       content: intl.formatMessage(messages['header.links.courses']),
     },
   ];
@@ -77,7 +77,7 @@ const Header = ({ intl }) => {
     },
     {
       type: 'item',
-      href: `${config.LMS_BASE_URL}/programs`,
+      href: `${config.LMS_BASE_URL}/dashboard/programs`,
       content: intl.formatMessage(messages['header.menu.my.programs']),
     },
     {
