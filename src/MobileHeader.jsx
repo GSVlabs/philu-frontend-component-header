@@ -11,49 +11,9 @@ import { LinkedLogo, Logo } from './Logo';
 // i18n
 import messages from './Header.messages';
 
-// Assets
-import { MenuIcon } from './Icons';
-
 class MobileHeader extends React.Component {
   constructor(props) { // eslint-disable-line no-useless-constructor
     super(props);
-  }
-
-  renderMainMenu() {
-    const { mainMenu } = this.props;
-
-    // Nodes are accepted as a prop
-    if (!Array.isArray(mainMenu)) {
-      return mainMenu;
-    }
-
-    return mainMenu.map((menuItem) => {
-      const {
-        type,
-        href,
-        content,
-        submenuContent,
-      } = menuItem;
-
-      if (type === 'item') {
-        return (
-          <a key={`${type}-${content}`} className="nav-link" href={href}>
-            {content}
-          </a>
-        );
-      }
-
-      return (
-        <Menu key={`${type}-${content}`} tag="div" className="nav-item">
-          <MenuTrigger tag="a" role="button" tabIndex="0" className="nav-link">
-            {content}
-          </MenuTrigger>
-          <MenuContent className="position-static pin-left pin-right py-2">
-            {submenuContent}
-          </MenuContent>
-        </Menu>
-      );
-    });
   }
 
   renderUserMenuItems() {
@@ -104,7 +64,6 @@ class MobileHeader extends React.Component {
       username,
       stickyOnMobile,
       intl,
-      mainMenu,
       userMenu,
       loggedOutItems,
     } = this.props;
@@ -118,28 +77,6 @@ class MobileHeader extends React.Component {
         className={`site-header-mobile d-flex justify-content-between align-items-center shadow ${stickyClassName}`}
       >
         <a className="nav-skip sr-only sr-only-focusable" href="#main">{intl.formatMessage(messages['header.label.skip.nav'])}</a>
-        {mainMenu.length > 0 ? (
-          <div className="w-100 d-flex justify-content-start">
-
-            <Menu className="position-static">
-              <MenuTrigger
-                tag="button"
-                className="icon-button"
-                aria-label={intl.formatMessage(messages['header.label.main.menu'])}
-                title={intl.formatMessage(messages['header.label.main.menu'])}
-              >
-                <MenuIcon role="img" aria-hidden focusable="false" style={{ width: '1.5rem', height: '1.5rem' }} />
-              </MenuTrigger>
-              <MenuContent
-                tag="nav"
-                aria-label={intl.formatMessage(messages['header.label.main.nav'])}
-                className="nav flex-column pin-left pin-right border-top shadow py-2"
-              >
-                {this.renderMainMenu()}
-              </MenuContent>
-            </Menu>
-          </div>
-        ) : null}
         <div className={`w-100 d-flex ${logoClasses}`}>
           { logoDestination === null ? <Logo className="logo" src={logo} alt={logoAltText} /> : <LinkedLogo className="logo" {...logoProps} itemType="http://schema.org/Organization" />}
         </div>

@@ -24,9 +24,6 @@ import { LinkedLogo, Logo } from './Logo';
 
 // i18n
 import messages from './Header.messages';
-
-// Assets
-import { MenuIcon } from './Icons';
 var MobileHeader = /*#__PURE__*/function (_React$Component) {
   _inherits(MobileHeader, _React$Component);
   var _super = _createSuper(MobileHeader);
@@ -36,41 +33,6 @@ var MobileHeader = /*#__PURE__*/function (_React$Component) {
     return _super.call(this, props);
   }
   _createClass(MobileHeader, [{
-    key: "renderMainMenu",
-    value: function renderMainMenu() {
-      var mainMenu = this.props.mainMenu;
-
-      // Nodes are accepted as a prop
-      if (!Array.isArray(mainMenu)) {
-        return mainMenu;
-      }
-      return mainMenu.map(function (menuItem) {
-        var type = menuItem.type,
-          href = menuItem.href,
-          content = menuItem.content,
-          submenuContent = menuItem.submenuContent;
-        if (type === 'item') {
-          return /*#__PURE__*/React.createElement("a", {
-            key: "".concat(type, "-").concat(content),
-            className: "nav-link",
-            href: href
-          }, content);
-        }
-        return /*#__PURE__*/React.createElement(Menu, {
-          key: "".concat(type, "-").concat(content),
-          tag: "div",
-          className: "nav-item"
-        }, /*#__PURE__*/React.createElement(MenuTrigger, {
-          tag: "a",
-          role: "button",
-          tabIndex: "0",
-          className: "nav-link"
-        }, content), /*#__PURE__*/React.createElement(MenuContent, {
-          className: "position-static pin-left pin-right py-2"
-        }, submenuContent));
-      });
-    }
-  }, {
     key: "renderUserMenuItems",
     value: function renderUserMenuItems() {
       var _this$props = this.props,
@@ -128,7 +90,6 @@ var MobileHeader = /*#__PURE__*/function (_React$Component) {
         username = _this$props2.username,
         stickyOnMobile = _this$props2.stickyOnMobile,
         intl = _this$props2.intl,
-        mainMenu = _this$props2.mainMenu,
         userMenu = _this$props2.userMenu,
         loggedOutItems = _this$props2.loggedOutItems;
       var logoProps = {
@@ -144,28 +105,7 @@ var MobileHeader = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/React.createElement("a", {
         className: "nav-skip sr-only sr-only-focusable",
         href: "#main"
-      }, intl.formatMessage(messages['header.label.skip.nav'])), mainMenu.length > 0 ? /*#__PURE__*/React.createElement("div", {
-        className: "w-100 d-flex justify-content-start"
-      }, /*#__PURE__*/React.createElement(Menu, {
-        className: "position-static"
-      }, /*#__PURE__*/React.createElement(MenuTrigger, {
-        tag: "button",
-        className: "icon-button",
-        "aria-label": intl.formatMessage(messages['header.label.main.menu']),
-        title: intl.formatMessage(messages['header.label.main.menu'])
-      }, /*#__PURE__*/React.createElement(MenuIcon, {
-        role: "img",
-        "aria-hidden": true,
-        focusable: "false",
-        style: {
-          width: '1.5rem',
-          height: '1.5rem'
-        }
-      })), /*#__PURE__*/React.createElement(MenuContent, {
-        tag: "nav",
-        "aria-label": intl.formatMessage(messages['header.label.main.nav']),
-        className: "nav flex-column pin-left pin-right border-top shadow py-2"
-      }, this.renderMainMenu()))) : null, /*#__PURE__*/React.createElement("div", {
+      }, intl.formatMessage(messages['header.label.skip.nav'])), /*#__PURE__*/React.createElement("div", {
         className: "w-100 d-flex ".concat(logoClasses)
       }, logoDestination === null ? /*#__PURE__*/React.createElement(Logo, {
         className: "logo",
