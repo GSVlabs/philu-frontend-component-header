@@ -62,7 +62,7 @@
     "stylelint-config-standard-scss": "^6.1.0"
   },
   "dependencies": {
-    "@edx/frontend-component-cookie-policy-banner": "git+https://github.com/raccoongang/frontend-component-cookie-policy-banner#quince-rg",
+    "@edx/frontend-component-cookie-policy-banner": "git+https://github.com/GSVlabs/philu-frontend-component-cookie-policy-banner#quince.main",
     "@edx/paragon": "21.1.10",
     "@fortawesome/fontawesome-svg-core": "6.4.2",
     "@fortawesome/free-brands-svg-icons": "6.4.2",
